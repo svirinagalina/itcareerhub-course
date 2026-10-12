@@ -1,0 +1,18 @@
+    1  cd ~/Downloads
+    2  git clone git@github.com:svirinagalina/git-feature.git
+    3  cd git-feature
+    4  git checkout -b feature
+    5  echo "# git-feature" > README.md
+    6  echo "Учебный репозиторий: ветка feature, commit --amend и merge." >> README.md
+    7  echo "" >> .gitignore
+    8  echo "# macOS" >> .gitignore
+    9  echo ".DS_Store" >> .gitignore
+   10  git add README.md .gitignore
+   11  git commit -m "Add README.md and update .gitignore"
+   12  git push -u origin feature
+   13  git ls-remote --heads origin
+   14  git commit --amend -m "Add README.md and update .gitignore ammend"
+   15  git push --force-with-lease origin feature
+   16  git checkout main
+   17  git merge feature
+   18  history > history.txt
