@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+thumbs.db
+
+# IDE (JetBrains, VS Code)
+.idea/
+*.iml
+.vscode/
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Результаты сборки
+out/
+debug/
+target/
+*.class
+*.jar
+*.exe
