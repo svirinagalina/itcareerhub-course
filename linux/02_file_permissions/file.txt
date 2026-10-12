@@ -1,0 +1,24 @@
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        472M     0  472M   0% /dev
+tmpfs           483M     0  483M   0% /dev/shm
+#!/bin/bash
+USER="Galina"
+echo "Меня зовут $USER"
+echo "Скрипт запущен из директории: $(pwd)"
+    1  vi -es -c 'wq' /tmp/file.txt
+    2  df -h | head -3 >> /tmp/file.txt
+    3  chmod g+wx /tmp/file.txt
+    4  chmod o-rwx /tmp/file.txt
+    5  ls -l /tmp/file.txt
+    6  cd /opt/100726-wdm/Galina_Svirina
+    7  echo '#!/bin/bash' > myfirstbashscript.sh
+    8  echo 'USER="Galina"' >> myfirstbashscript.sh
+    9  echo 'echo "Меня зовут $USER"' >> myfirstbashscript.sh
+   10  echo 'echo "Скрипт запущен из директории: $(pwd)"' >> myfirstbashscript.sh
+   11  chmod +x myfirstbashscript.sh
+   12  ls -l myfirstbashscript.sh
+   13  ./myfirstbashscript.sh
+   14  cd /tmp
+   15  /opt/100726-wdm/Galina_Svirina/myfirstbashscript.sh
+   16  cat /opt/100726-wdm/Galina_Svirina/myfirstbashscript.sh >> /tmp/file.txt
+   17  history >> /tmp/file.txt

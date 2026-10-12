@@ -1,0 +1,13 @@
+#!/bin/bash
+USER="Galina"
+date
+echo "hello $USER!"
+pwd
+ps -ef | grep bioset | grep -v grep | wc -l
+ls -l /etc/passwd | awk '{print $1}'
+--- output ---
+Mon Oct 12 09:51:12 UTC 2026
+hello Galina!
+/root
+10
+-rw-r--r--

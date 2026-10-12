@@ -1,0 +1,13 @@
+    1  cd /opt/100726-wdm/Galina_Svirina
+    2  echo '#!/bin/bash' > task_Galina.sh
+    3  echo 'DIR="/opt/100726-wdm/Galina_Svirina/files"' >> task_Galina.sh
+    4  echo 'mkdir -p "$DIR"' >> task_Galina.sh
+    5  echo 'DATE=$(date +"%d.%m.%y")' >> task_Galina.sh
+    6  echo 'for i in $(seq 1 10); do touch "$DIR/${i}_$DATE"; done' >> task_Galina.sh
+    7  chmod +x task_Galina.sh
+    8  cat task_Galina.sh
+    9  ./task_Galina.sh
+   10  ls -l files
+   11  (crontab -l; echo "*/15 * * * * /opt/100726-wdm/Galina_Svirina/task_Galina.sh") | crontab -
+   12  crontab -l | grep Galina
+   13  history > history.txt
